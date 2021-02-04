@@ -16,7 +16,7 @@ In series, the following will be released via [che-release](https://github.com/e
 
 * che-theia, che-machine-exec, che-devfile registry, 
 * che-plugin-registry (once che-theia and machine-exec are done)
-* che-parent, che-dashboard, che-workspace-loader, and che (server assembly), including release to [Maven Central](https://github.com/eclipse/che/issues/16043)
+* che-parent, che-dashboard, and che (server assembly), including release to [Maven Central](https://github.com/eclipse/che/issues/16043)
 * che-operator
 
 Then, these steps will be done, which still [require some manual intervention](https://github.com/eclipse/che-release/blob/master/README.md#phase-2---manual-steps) (PR verification is not yet automated):
@@ -25,7 +25,7 @@ Then, these steps will be done, which still [require some manual intervention](h
 * chectl
 
 - [ ] che-theia, che-machine-exec, che-devfile-registry, che-plugin-registry
-- [ ] che-parent, che-dashboard, che-workspace-loader, che
+- [ ] che-parent, che-dashboard, che
 - [ ] che-operator _(depends on all of the above)_
 - [ ] chectl _(depends on che-operator)_
 - [ ] [Che community operator PRs](https://github.com/operator-framework/community-operators/pulls?q=%22Update+eclipse-che+operator%22+is%3Aopen) _(depends on che-operator)_
@@ -47,7 +47,6 @@ If this is a .0 release:
 | @mkuznyetsov  | [che-plugin-registry](https://github.com/eclipse/che-plugin-registry/blob/master/RELEASE.md) | [make-release.sh](https://github.com/eclipse/che-plugin-registry/blob/master/make-release.sh) | [GH action](https://github.com/eclipse/che-plugin-registry/actions?query=workflow%3A%22Release+Che+Plugin+Registry%22) | [`eclipse/che-plugin-registry`](https://quay.io/eclipse/che-plugin-registry)| 
 | @mkuznyetsov  | [che-parent](https://github.com/eclipse/che-parent/blob/master/RELEASE.md) | [make-release.sh](https://github.com/eclipse/che-parent/blob/master/make-release.sh) | [centos](https://ci.centos.org/job/devtools-che-release-che-release) | [che-parent](https://search.maven.org/search?q=a:che-parent) |
 | @mkuznyetsov  | [che-dashboard](https://github.com/eclipse/che-dashboard/blob/master/RELEASE.md) | [make-release.sh](https://github.com/eclipse/che-dashboard/blob/master/make-release.sh) | [GH action](https://github.com/eclipse/che-dashboard/actions?query=workflow%3A%22Release+Che+Dashboard%22) | [`che-dashboard`](https://quay.io/repository/eclipse/che-dashboard?tag=next&tab=tags) |
-| @mkuznyetsov  | [che-workspace-loader](https://github.com/eclipse/che-workspace-loader/blob/master/RELEASE.md) | [make-release.sh](https://github.com/eclipse/che-workspace-loader/blob/master/make-release.sh) | [GH action](https://github.com/eclipse/che-workspace-loader/actions?query=workflow%3A%22Release+Che+Workspace+Loader%22) | [`che-workspace-loader`](https://quay.io/repository/eclipse/che-workspace-loader?tag=next&tab=tags) |
 | @mkuznyetsov  | [che](https://github.com/eclipse/che/blob/master/RELEASE.md) | [cico_release.sh](https://github.com/eclipse/che-release/blob/master/cico_release.sh) | [centos](https://ci.centos.org/job/devtools-che-release-che-release) | [che.core](https://search.maven.org/search?q=che.core),<br/> [`eclipse/che-server`](https://quay.io/eclipse/che-server),<br/>[`eclipse/che-endpoint-watcher`](https://quay.io/eclipse/che-endpoint-watcher),<br/> [`eclipse/che-keycloak`](https://quay.io/eclipse/che-keycloak),<br/> [`eclipse/che-postgres`](https://quay.io/eclipse/che-postgres),<br/> [`eclipse/che-server`](https://quay.io/eclipse/che-server),<br/> [`eclipse/che-e2e`](https://quay.io/eclipse/che-e2e) |
 | @mkuznyetsov| [che-operator](https://github.com/eclipse/che-operator/blob/master/RELEASE.md) | [make-release.sh](https://github.com/eclipse/che-operator/blob/master/make-release.sh) | [GH action](https://github.com/eclipse/che-operator/actions?query=workflow%3A%22Release+Che+Operator%22) | [`eclipse/che-operator`](https://quay.io/eclipse/che-operator)| 
 | @mkuznyetsov| [chectl](https://github.com/che-incubator/chectl/blob/master/RELEASE.md) | [make-release.sh](https://github.com/che-incubator/chectl/blob/master/make-release.sh) | [GH action](https://github.com/che-incubator/chectl/actions) | [chectl releases](https://github.com/che-incubator/chectl/releases)
